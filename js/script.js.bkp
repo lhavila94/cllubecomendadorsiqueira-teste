@@ -19,39 +19,17 @@
     }, 600);
   });
 
-  // Header scroll effect + parallax (combinados num único listener com rAF)
+  // Header scroll effect
   const header = $('#header');
-  const heroBgEl = $('.hero-bg');
-  let scrollTicking = false;
-  function onScrollFrame(){
-    const y = window.scrollY;
-    if(y > 40) header.classList.add('scrolled'); else header.classList.remove('scrolled');
-    if(heroBgEl) heroBgEl.style.transform = `translateY(${y * 0.12}px) scale(1.05)`;
-    scrollTicking = false;
-  }
   window.addEventListener('scroll', () => {
-    if(!scrollTicking){
-      requestAnimationFrame(onScrollFrame);
-      scrollTicking = true;
-    }
+    if(window.scrollY > 40) header.classList.add('scrolled'); else header.classList.remove('scrolled');
   });
 
   // Nav toggle (mobile)
   const navToggle = $('#navToggle');
-  const mainNav = $('#mainNav');
   navToggle && navToggle.addEventListener('click', ()=>{
     document.body.classList.toggle('nav-open');
-    const isOpen = mainNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-
-  // Close mobile menu after choosing a link
-  mainNav && mainNav.addEventListener('click', e=>{
-    if(e.target.tagName === 'A' && mainNav.classList.contains('open')){
-      mainNav.classList.remove('open');
-      document.body.classList.remove('nav-open');
-      navToggle && navToggle.setAttribute('aria-expanded', 'false');
-    }
+    $('#mainNav').classList.toggle('open');
   });
 
   // Smooth scroll for internal links
@@ -97,7 +75,6 @@
     mapGrid.innerHTML = '';
     lots.forEach(l => {
       const btn = document.createElement('button');
-      btn.type = 'button';
       btn.className = 'map-lote';
       btn.textContent = l.number;
       btn.dataset.number = l.number;
@@ -105,8 +82,7 @@
       btn.dataset.status = l.status;
       btn.dataset.area = l.area;
       btn.dataset.value = l.value;
-      btn.setAttribute('aria-label', `Lote ${l.number}, ${l.area} m², status ${l.status}`);
-      btn.addEventListener('click', ()=>openLoteModal(l, btn));
+      btn.addEventListener('click', ()=>openLoteModal(l));
       mapGrid.appendChild(btn);
     });
   }
@@ -116,21 +92,18 @@
   const loteModal = $('#loteModal');
   const modalBody = $('#modalBody');
   const modalClose = $('#modalClose');
-  let lastFocusedEl = null;
-  function openLoteModal(l, triggerEl){
+  function openLoteModal(l){
     if(!loteModal) return;
-    lastFocusedEl = triggerEl || document.activeElement;
     modalBody.innerHTML = `
       <h3>${l.number} - Quadra ${l.quadra}</h3>
       <p><strong>Área:</strong> ${l.area} m²</p>
       <p><strong>Valor:</strong> R$ ${l.value.toLocaleString()}</p>
       <p><strong>Status:</strong> ${l.status}</p>
       <p>${l.desc}</p>
-      <div style="margin-top:14px"><button type="button" class='btn btn-gold' id='interesseBtn'>Tenho Interesse</button></div>
+      <div style="margin-top:14px"><button class='btn btn-gold' id='interesseBtn'>Tenho Interesse</button></div>
     `;
     loteModal.classList.add('show');
     loteModal.setAttribute('aria-hidden','false');
-    modalClose && modalClose.focus();
     const interesseBtn = $('#interesseBtn');
     interesseBtn && interesseBtn.addEventListener('click', ()=>{
       alert('Obrigado pelo interesse! A corretora entrará em contato.');
@@ -138,14 +111,7 @@
   }
   modalClose && modalClose.addEventListener('click', closeModal);
   loteModal && loteModal.addEventListener('click', e=>{ if(e.target===loteModal) closeModal(); });
-  document.addEventListener('keydown', e=>{
-    if(e.key === 'Escape' && loteModal && loteModal.classList.contains('show')) closeModal();
-  });
-  function closeModal(){
-    loteModal.classList.remove('show');
-    loteModal.setAttribute('aria-hidden','true');
-    if(lastFocusedEl && typeof lastFocusedEl.focus === 'function') lastFocusedEl.focus();
-  }
+  function closeModal(){ loteModal.classList.remove('show'); loteModal.setAttribute('aria-hidden','true'); }
 
   // Render lot cards
   const lotList = $('#lotList');
@@ -156,12 +122,12 @@
       const card = document.createElement('article');
       card.className = 'card lot-card';
       card.innerHTML = `
-        <img src="https://picsum.photos/seed/${l.number}/800/480" alt="Foto ilustrativa do lote ${l.number}" loading="lazy" width="800" height="480">
+        <img src="https://picsum.photos/seed/${l.number}/800/480" alt="${l.number}">
         <div class="lot-info">
           <h4>${l.number} — Quadra ${l.quadra}</h4>
           <p>Área: ${l.area} m² — Valor: R$ ${l.value.toLocaleString()}</p>
           <p>Status: <strong>${l.status}</strong></p>
-          <div style="margin-top:8px"><button type="button" class='btn btn-outline' data-lote='${l.number}'>Ver Detalhes</button></div>
+          <div style="margin-top:8px"><button class='btn btn-outline' data-lote='${l.number}'>Ver Detalhes</button></div>
         </div>
       `;
       lotList.appendChild(card);
@@ -233,11 +199,9 @@
   // Year in footer
   $('#year') && ($('#year').textContent = new Date().getFullYear());
 
-  // WhatsApp fab: usa o próprio href definido no HTML (fonte única, evita nº divergente)
-  const whatsappFab = $('#whatsappFab');
-  whatsappFab && whatsappFab.addEventListener('click', e=>{
-    e.preventDefault();
-    window.open(whatsappFab.href, '_blank', 'noopener,noreferrer');
+  // WhatsApp fab default
+  $('#whatsappFab') && $('#whatsappFab').addEventListener('click', e=>{
+    e.preventDefault(); window.open('https://wa.me/5511999999999','_blank');
   });
 
   // FAQ accordion
@@ -259,6 +223,14 @@
     // fake submit
     alert('Mensagem enviada! Em breve entraremos em contato.');
     contactForm.reset();
+  });
+
+  // Parallax effect (subtle)
+  const heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll', ()=>{
+    if(heroBg){
+      heroBg.style.transform = `translateY(${window.scrollY*0.12}px) scale(1.05)`;
+    }
   });
 
 })();

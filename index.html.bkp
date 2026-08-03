@@ -5,23 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CLLUBE COMENDADOR SIQUEIRA</title>
   <meta name="description" content="Condomínio CLLUBE COMENDADOR SIQUEIRA — exclusividade, natureza e qualidade de vida." />
-
-  <!-- SEO / Open Graph -->
-  <link rel="canonical" href="https://www.exemplo.com/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="CLLUBE COMENDADOR SIQUEIRA" />
-  <meta property="og:description" content="Condomínio CLLUBE COMENDADOR SIQUEIRA — exclusividade, natureza e qualidade de vida." />
-  <meta property="og:image" content="assets/images/logo.png" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" sizes="any" />
-  <link rel="apple-touch-icon" href="assets/images/logo.png" />
-
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -30,40 +14,39 @@
   <!-- Loading Screen -->
   <div id="loading" class="loading-screen">
     <div class="loader">
-      <div class="logo-load">
-        <img src="assets/images/logo.png" alt="Logo CLLUBE Comendador Siqueira" width="160" height="160" />
+      <div class="logo-load"> 
+        <img src="assets/images/logo.png" alt="Logo" />
       </div>
-      <div class="spinner" role="status" aria-label="Carregando"></div>
+      <div class="spinner"></div>
     </div>
   </div>
 
   <!-- Header / Menu -->
   <header class="site-header" id="header">
     <div class="container header-inner">
-      <a href="#hero" class="logo-link"><img src="assets/images/logo.png" alt="Logo CLLUBE Comendador Siqueira" width="120" height="120"></a>
-      <nav class="main-nav" id="mainNav" aria-label="Menu principal">
+      <a href="#hero" class="logo-link"><img src="assets/images/logo.png" alt="Logo CLLUBE"></a>
+      <nav class="main-nav" id="mainNav">
         <ul>
           <li><a href="#hero">Início</a></li>
           <li><a href="#diferenciais">O Condomínio</a></li>
           <li><a href="#lotes">Lotes</a></li>
           <li><a href="#mapa">Mapa</a></li>
           <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#localizacao">Localização</a></li>
           <li><a href="#parceiros">Parceiros</a></li>
           <li><a href="#corretora">Corretora</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
     </div>
   </header>
 
   <!-- Hero -->
   <section id="hero" class="hero">
     <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <img src="assets/images/logo.png" alt="Logo CLLUBE Comendador Siqueira" class="hero-logo" width="200" height="200">
+      <img src="assets/images/logo.png" alt="Logo CLLUBE" class="hero-logo">
       <h1 class="hero-title">CLLUBE COMENDADOR SIQUEIRA</h1>
       <p class="hero-sub">Exclusividade, natureza e qualidade de vida.</p>
       <div class="hero-cta">
@@ -79,43 +62,44 @@
       <h2 class="section-title">Diferenciais</h2>
       <p class="section-sub">Características do empreendimento</p>
       <div class="cards-grid" id="features">
+        <!-- Cards premium -->
         <article class="card feature">
-          <div class="icon" aria-hidden="true">🔒</div>
+          <div class="icon">🔒</div>
           <h3>Segurança</h3>
           <p>Sistema de segurança integrado 24h.</p>
         </article>
         <article class="card feature">
-          <div class="icon" aria-hidden="true">🌳</div>
+          <div class="icon">🌳</div>
           <h3>Natureza</h3>
           <p>Preservação de áreas verdes e paisagismo.</p>
         </article>
         <article class="card feature">
-          <div class="icon" aria-hidden="true">🏞️</div>
+          <div class="icon">🏞️</div>
           <h3>Área Verde</h3>
           <p>Amplas áreas de convivência e trilhas.</p>
         </article>
         <article class="card feature">
-          <div class="icon" aria-hidden="true">🏗️</div>
+          <div class="icon">🏗️</div>
           <h3>Infraestrutura</h3>
           <p>Rede de água, esgoto e energia em alta performance.</p>
         </article>
         <article class="card feature">
-          <div class="icon" aria-hidden="true">📍</div>
+          <div class="icon">📍</div>
           <h3>Localização</h3>
           <p>Fácil acesso e proximidade de serviços urbanos.</p>
         </article>
         <article class="card feature">
-          <div class="icon" aria-hidden="true">📈</div>
+          <div class="icon">📈</div>
           <h3>Valorização</h3>
           <p>Potencial de valorização a médio e longo prazo.</p>
         </article>
         <article class="card feature">
-          <div class="icon" aria-hidden="true">💡</div>
+          <div class="icon">💡</div>
           <h3>Iluminação</h3>
           <p>Iluminação pública planejada e eficiente.</p>
         </article>
         <article class="card feature">
-          <div class="icon" aria-hidden="true">🛣️</div>
+          <div class="icon">🛣️</div>
           <h3>Pavimentação</h3>
           <p>Ruas pavimentadas com acabamento de alto padrão.</p>
         </article>
@@ -131,47 +115,37 @@
 
       <div class="map-wrap">
         <div class="map-grid" id="mapGrid">
-          <!-- Lotes gerados via JS -->
+          <!-- Lots generated by JS for flexibility -->
         </div>
       </div>
 
-      <!-- Filtros -->
-      <form id="filterForm" class="filter-form" role="search" aria-label="Filtro de lotes" onsubmit="return false;">
-        <label for="searchLote" class="visually-hidden">Pesquisar lote</label>
+      <!-- Filters -->
+      <form id="filterForm" class="filter-form">
         <input type="search" id="searchLote" placeholder="Pesquisar lote (ex: A01)">
-
-        <label for="selectQuadra" class="visually-hidden">Quadra</label>
         <select id="selectQuadra">
           <option value="">Todas as Quadras</option>
           <option value="A">Quadra A</option>
           <option value="B">Quadra B</option>
           <option value="C">Quadra C</option>
         </select>
-
-        <label for="selectStatus" class="visually-hidden">Status</label>
         <select id="selectStatus">
           <option value="">Todos os Status</option>
           <option value="disponivel">Disponível</option>
           <option value="reservado">Reservado</option>
           <option value="vendido">Vendido</option>
         </select>
-
-        <label for="selectMetragem" class="visually-hidden">Metragem</label>
         <select id="selectMetragem">
           <option value="">Todas as Metragens</option>
           <option value="<400">&lt; 400m²</option>
           <option value="400-700">400 - 700m²</option>
           <option value=">700">&gt; 700m²</option>
         </select>
-
-        <label for="selectFaixa" class="visually-hidden">Faixa de preço</label>
         <select id="selectFaixa">
           <option value="">Todas as Faixas</option>
           <option value="0-50000">Até 50.000</option>
           <option value="50000-100000">50.000 - 100.000</option>
           <option value="100000-9999999">Acima de 100.000</option>
         </select>
-
         <button type="button" id="btnFilter" class="btn btn-dark">Filtrar</button>
         <button type="button" id="btnReset" class="btn btn-outline">Limpar</button>
       </form>
@@ -186,7 +160,7 @@
       <p class="section-sub">Seleção de lotes disponíveis e oportunidades.</p>
 
       <div class="cards-grid lot-list" id="lotList">
-        <!-- JS renderiza os cards de lote -->
+        <!-- JS will render lot cards (12 fictícios) -->
       </div>
     </div>
   </section>
@@ -196,18 +170,11 @@
     <div class="container">
       <h2 class="section-title">Galeria</h2>
       <div class="gallery-grid" id="gallery">
-        <a href="https://picsum.photos/1200/800?random=1" class="gallery-item" target="_blank" rel="noopener noreferrer">
-          <img src="https://picsum.photos/1200/800?random=1" alt="Vista do condomínio 1" loading="lazy" width="1200" height="800">
-        </a>
-        <a href="https://picsum.photos/1200/800?random=2" class="gallery-item" target="_blank" rel="noopener noreferrer">
-          <img src="https://picsum.photos/1200/800?random=2" alt="Vista do condomínio 2" loading="lazy" width="1200" height="800">
-        </a>
-        <a href="https://picsum.photos/1200/800?random=3" class="gallery-item" target="_blank" rel="noopener noreferrer">
-          <img src="https://picsum.photos/1200/800?random=3" alt="Vista do condomínio 3" loading="lazy" width="1200" height="800">
-        </a>
-        <a href="https://picsum.photos/1200/800?random=4" class="gallery-item" target="_blank" rel="noopener noreferrer">
-          <img src="https://picsum.photos/1200/800?random=4" alt="Vista do condomínio 4" loading="lazy" width="1200" height="800">
-        </a>
+        <!-- placeholders -->
+        <a href="#" class="gallery-item"><img src="https://picsum.photos/1200/800?random=1" alt="Galeria 1"></a>
+        <a href="#" class="gallery-item"><img src="https://picsum.photos/1200/800?random=2" alt="Galeria 2"></a>
+        <a href="#" class="gallery-item"><img src="https://picsum.photos/1200/800?random=3" alt="Galeria 3"></a>
+        <a href="#" class="gallery-item"><img src="https://picsum.photos/1200/800?random=4" alt="Galeria 4"></a>
       </div>
     </div>
   </section>
@@ -217,10 +184,10 @@
     <div class="container">
       <h2 class="section-title">Localização</h2>
       <div class="location-grid">
-        <div class="map-fake" role="img" aria-label="Mapa ilustrativo da localização do empreendimento">Mapa Fictício (placeholder)</div>
+        <div class="map-fake">Mapa Fictício (placeholder)</div>
         <div class="location-info">
           <p>Endereço do empreendimento e informações relevantes para visitantes.</p>
-          <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Como Chegar</a>
+          <a href="#" class="btn btn-outline">Como Chegar</a>
         </div>
       </div>
     </div>
@@ -229,15 +196,15 @@
   <!-- Corretora -->
   <section id="corretora" class="section section-agent">
     <div class="container agent-wrap">
-      <div class="agent-photo"><img src="https://picsum.photos/400/400?person" alt="Foto de Monica Felix, corretora de imóveis" loading="lazy" width="400" height="400"></div>
+      <div class="agent-photo"><img src="https://picsum.photos/400/400?person" alt="Monica Felix"></div>
       <div class="agent-info">
         <h3>Monica Felix</h3>
         <p class="agent-role">Corretora de Imóveis</p>
         <p>Profissional com ampla experiência no mercado, pronta para ajudar você a encontrar o lote ideal.</p>
         <div class="agent-contacts">
-          <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="btn btn-gold">WhatsApp</a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Instagram</a>
-          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Facebook</a>
+          <a href="#" class="btn btn-gold">WhatsApp</a>
+          <a href="#" class="btn btn-outline">Instagram</a>
+          <a href="#" class="btn btn-outline">Facebook</a>
         </div>
       </div>
     </div>
@@ -248,10 +215,11 @@
     <div class="container">
       <h2 class="section-title">Parceiros</h2>
       <div class="partners-grid">
-        <article class="partner-card"><h4>Caixa Econômica</h4><a href="https://www.caixa.gov.br" target="_blank" rel="noopener noreferrer" class="btn btn-outline small">Acessar Site</a></article>
-        <article class="partner-card"><h4>Banco do Brasil</h4><a href="https://www.bb.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-outline small">Acessar Site</a></article>
-        <article class="partner-card"><h4>Sicredi</h4><a href="https://www.sicredi.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-outline small">Acessar Site</a></article>
-        <article class="partner-card"><h4>Bradesco</h4><a href="https://www.bradesco.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-outline small">Acessar Site</a></article>
+        <!-- Cards com botões -->
+        <article class="partner-card"><h4>Caixa Econômica</h4><a href="#" class="btn btn-outline small">Acessar Site</a></article>
+        <article class="partner-card"><h4>Banco do Brasil</h4><a href="#" class="btn btn-outline small">Acessar Site</a></article>
+        <article class="partner-card"><h4>Sicredi</h4><a href="#" class="btn btn-outline small">Acessar Site</a></article>
+        <article class="partner-card"><h4>Bradesco</h4><a href="#" class="btn btn-outline small">Acessar Site</a></article>
         <article class="partner-card"><h4>Cartório</h4><a href="#" class="btn btn-outline small">Acessar Site</a></article>
         <article class="partner-card"><h4>Construtora</h4><a href="#" class="btn btn-outline small">Acessar Site</a></article>
         <article class="partner-card"><h4>Arquitetura</h4><a href="#" class="btn btn-outline small">Acessar Site</a></article>
@@ -261,17 +229,17 @@
     </div>
   </section>
 
-  <!-- Depoimentos e FAQ -->
+  <!-- Depoimentos e FAQ (bonus) -->
   <section id="depoimentos" class="section section-testimonials">
     <div class="container">
       <h2 class="section-title">Depoimentos</h2>
       <div class="testimonials">
-        <blockquote>Um projeto que transmite confiança e qualidade. <cite>— Cliente</cite></blockquote>
+        <blockquote>"Um projeto que transmite confiança e qualidade." — Cliente</blockquote>
       </div>
       <h2 class="section-title">Perguntas Frequentes</h2>
       <div class="faq" id="faq">
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Quais são as formas de pagamento?</button>
+          <button class="faq-q">Quais são as formas de pagamento?</button>
           <div class="faq-a">Aceitamos financiamentos e negociações diretas.</div>
         </div>
       </div>
@@ -287,23 +255,15 @@
         <address>
           Rua Exemplo, 123<br>
           Bairro, Cidade - Estado<br>
-          Telefone: <a href="tel:+550000000000">(00) 0000-0000</a><br>
-          Email: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a>
+          Telefone: (00) 0000-0000<br>
+          Email: contato@exemplo.com
         </address>
       </div>
-      <form id="contactForm" class="contact-form" method="post" action="#" novalidate>
-        <label for="nome" class="visually-hidden">Nome</label>
-        <input type="text" id="nome" name="nome" placeholder="Nome" required autocomplete="name">
-
-        <label for="email" class="visually-hidden">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="E-mail" required autocomplete="email">
-
-        <label for="telefone" class="visually-hidden">Telefone</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="Telefone" autocomplete="tel">
-
-        <label for="mensagem" class="visually-hidden">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" placeholder="Mensagem" required></textarea>
-
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="tel" id="telefone" placeholder="Telefone">
+        <textarea id="mensagem" placeholder="Mensagem" required></textarea>
         <button type="submit" class="btn btn-gold">Enviar Mensagem</button>
       </form>
     </div>
@@ -313,7 +273,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-about">
-        <img src="assets/images/logo.png" alt="Logo CLLUBE Comendador Siqueira" width="100" height="100">
+        <img src="assets/images/logo.png" alt="Logo">
         <p>CLLUBE COMENDADOR SIQUEIRA — Exclusividade e qualidade de vida.</p>
       </div>
       <div>
@@ -325,14 +285,13 @@
         <ul>
           <li><a href="#lotes">Lotes</a></li>
           <li><a href="#mapa">Mapa</a></li>
-          <li><a href="#localizacao">Localização</a></li>
         </ul>
       </div>
       <div>
         <h4>Redes</h4>
         <div class="socials">
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
         </div>
       </div>
     </div>
@@ -340,20 +299,19 @@
   </footer>
 
   <!-- WhatsApp Flutuante -->
-  <a href="https://wa.me/5500000000000" class="whatsapp-fab" id="whatsappFab" aria-label="Falar no WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
+  <a href="#" class="whatsapp-fab" id="whatsappFab" aria-label="WhatsApp">💬</a>
 
   <!-- Back to top -->
-  <button id="backToTop" class="back-to-top" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+  <button id="backToTop" class="back-to-top" title="Voltar ao topo">↑</button>
 
   <!-- Modal Lote -->
-  <div id="loteModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalBody">
+  <div id="loteModal" class="modal" aria-hidden="true">
     <div class="modal-content">
-      <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+      <button class="modal-close" id="modalClose">×</button>
       <div id="modalBody"></div>
     </div>
   </div>
 
-  <script src="js/script.js" defer></script>
-  <noscript>Este site funciona melhor com JavaScript habilitado.</noscript>
+  <script src="js/script.js"></script>
 </body>
 </html>
