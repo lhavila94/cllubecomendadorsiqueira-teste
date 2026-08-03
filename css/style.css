@@ -107,12 +107,12 @@ textarea:focus-visible {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
 }
 
 .logo-link img {
-  height: 48px;
+  height: auto;
 }
 
 .main-nav ul {
