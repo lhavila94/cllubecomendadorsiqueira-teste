@@ -124,6 +124,7 @@ body {
 
 .hero-logo {
   height: auto;
+  max-height: 450px;
   margin-bottom: 18px
 }
 
